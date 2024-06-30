@@ -28,7 +28,7 @@ runs:
     - name: download and extract tarball
       shell: bash
       run: |
-        curl -L -o tarball.tar.gz https://github.com/dotenvx/dotenvx-ext-ub/releases/download/${{ env.VERSION }}/dotenvx-ext-hub-${{ env.CLEAN_VERSION }}-${{ inputs.platform }}.tar.gz
+        curl -L -o tarball.tar.gz https://github.com/dotenvx/dotenvx-ext-hub/releases/download/${{ env.VERSION }}/dotenvx-ext-hub-${{ env.CLEAN_VERSION }}-${{ inputs.platform }}.tar.gz
         mkdir -p output
         tar -xzvf tarball.tar.gz -C output --strip-components=1
 

@@ -37,6 +37,5 @@ Commands:
   status                      display logged in user
   logout [options]            log out this machine from dotenvx hub
   help [command]              display help for command
-➜  extension-test
 
 ```

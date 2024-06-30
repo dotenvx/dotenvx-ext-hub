@@ -5,7 +5,19 @@ const program = new Command()
 
 const packageJson = require('./../lib/helpers/packageJson')
 const store = require('./../shared/store')
-const { logger } = require('./../shared/logger')
+const { setLogLevel, logger } = require('./../shared/logger')
+
+// global log levels
+program
+  .option('-l, --log-level <level>', 'set log level', 'info')
+  .option('-q, --quiet', 'sets log level to error')
+  .option('-v, --verbose', 'sets log level to verbose')
+  .option('-d, --debug', 'sets log level to debug')
+  .hook('preAction', (thisCommand, actionCommand) => {
+    const options = thisCommand.opts()
+
+    setLogLevel(options)
+  })
 
 // cli
 program
@@ -44,7 +56,6 @@ program
   .option('-h, --hostname <url>', 'set hostname', store.getHostname())
   .action(function (...args) {
     logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
-
     pullAction.apply(this, args)
   })
 

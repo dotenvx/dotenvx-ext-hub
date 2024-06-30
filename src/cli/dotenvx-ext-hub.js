@@ -24,18 +24,18 @@ program
     loginAction.apply(this, args)
   })
 
-// const pushAction = require('./actions/push')
-// hub
-//   .command('push')
-//   .description('push .env.keys to dotenvx hub')
-//   .argument('[directory]', 'directory to push', '.')
-//   .option('-h, --hostname <url>', 'set hostname', store.getHostname())
-//   .action(function (...args) {
-//     logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
-//
-//     pushAction.apply(this, args)
-//   })
-//
+const pushAction = require('./actions/push')
+program
+  .command('push')
+  .description('push .env.keys to dotenvx hub')
+  .argument('[directory]', 'directory to push', '.')
+  .option('-h, --hostname <url>', 'set hostname', store.getHostname())
+  .action(function (...args) {
+    logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
+
+    pushAction.apply(this, args)
+  })
+
 // const pullAction = require('./actions/pull')
 // hub
 //   .command('pull')

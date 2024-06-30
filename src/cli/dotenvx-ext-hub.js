@@ -48,47 +48,47 @@ program
     pullAction.apply(this, args)
   })
 
-// const openAction = require('./actions/open')
-// hub
-//   .command('open')
-//   .description('view repository on dotenvx hub')
-//   .option('-h, --hostname <url>', 'set hostname', store.getHostname())
-//   .action(function (...args) {
-//     logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
-//
-//     openAction.apply(this, args)
-//   })
-//
-// const tokenAction = require('./actions/token')
-// hub
-//   .command('token')
-//   .description('print the auth token dotenvx hub is configured to use')
-//   .option('-h, --hostname <url>', 'set hostname', 'https://hub.dotenvx.com')
-//   .action(function (...args) {
-//     logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
-//
-//     tokenAction.apply(this, args)
-//   })
-//
-// const statusAction = require('./actions/status')
-// hub
-//   .command('status')
-//   .description('display logged in user')
-//   .action(function (...args) {
-//     logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
-//
-//     statusAction.apply(this, args)
-//   })
-//
-// const logoutAction = require('./actions/logout')
-// hub
-//   .command('logout')
-//   .description('log out this machine from dotenvx hub')
-//   .option('-h, --hostname <url>', 'set hostname', store.getHostname())
-//   .action(function (...args) {
-//     logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
-//
-//     logoutAction.apply(this, args)
-//   })
+const openAction = require('./actions/open')
+program
+  .command('open')
+  .description('view repository on dotenvx hub')
+  .option('-h, --hostname <url>', 'set hostname', store.getHostname())
+  .action(function (...args) {
+    logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
+
+    openAction.apply(this, args)
+  })
+
+const tokenAction = require('./actions/token')
+program
+  .command('token')
+  .description('print the auth token dotenvx hub is configured to use')
+  .option('-h, --hostname <url>', 'set hostname', 'https://hub.dotenvx.com')
+  .action(function (...args) {
+    logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
+
+    tokenAction.apply(this, args)
+  })
+
+const statusAction = require('./actions/status')
+program
+  .command('status')
+  .description('display logged in user')
+  .action(function (...args) {
+    logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
+
+    statusAction.apply(this, args)
+  })
+
+const logoutAction = require('./actions/logout')
+program
+  .command('logout')
+  .description('log out this machine from dotenvx hub')
+  .option('-h, --hostname <url>', 'set hostname', store.getHostname())
+  .action(function (...args) {
+    logger.warn('DEPRECATION NOTICE: to be replaced by [dotenvx pro]')
+
+    logoutAction.apply(this, args)
+  })
 
 program.parse(process.argv)

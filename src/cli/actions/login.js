@@ -115,6 +115,8 @@ async function login () {
       await open(verificationUri)
 
       spinner.start()
+    } else {
+      process.exit(1)
     }
   } catch (error) {
     spinner.start()

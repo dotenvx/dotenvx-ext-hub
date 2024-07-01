@@ -1,10 +1,8 @@
 # dotenvx-ext-hub
 
-> `dotenvx ext hub` - extend dotenvx with hub commands.
->
 > 🚫 DEPRECATED: to be replaced by [dotenvx pro]
 
-### Quickstart [![npm version](https://img.shields.io/npm/v/@dotenvx/dotenvx-ext-hub.svg)](https://www.npmjs.com/package/@dotenvx/dotenvx-ext-hub)
+## Quickstart [![npm version](https://img.shields.io/npm/v/@dotenvx/dotenvx-ext-hub.svg)](https://www.npmjs.com/package/@dotenvx/dotenvx-ext-hub)
 
 Extend `dotenv` with hub (deprecated).
 

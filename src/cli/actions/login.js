@@ -1,9 +1,9 @@
 const open = require('open')
 const { request } = require('undici')
 const clipboardy = require('./../../lib/helpers/clipboardy')
-const confirm = require('@inquirer/confirm').default
 
-const createSpinner = require('./../../shared/createSpinner')
+const confirm = require('./../../shared/confirm')
+const { createSpinner } = require('./../../shared/createSpinner')
 const store = require('./../../shared/store')
 const { logger } = require('./../../shared/logger')
 
@@ -113,11 +113,8 @@ async function login () {
 
     if (answer) {
       await open(verificationUri)
-
-      spinner.start()
-    } else {
-      process.exit(1)
     }
+    spinner.start()
   } catch (error) {
     spinner.start()
     spinner.fail(error.toString())

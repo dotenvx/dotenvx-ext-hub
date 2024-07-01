@@ -4,17 +4,51 @@
 >
 > 🚫 DEPRECATED: to be replaced by [dotenvx pro]
 
-## Installation
+### Quickstart [![npm version](https://img.shields.io/npm/v/@dotenvx/dotenvx-ext-hub.svg)](https://www.npmjs.com/package/@dotenvx/dotenvx-ext-hub)
+
+Extend `dotenv` with hub (deprecated).
 
 ```sh
-npm @dotenvx/dotenvx-ext-hub --save
+npm install @dotenvx/dotenvx-ext-hub --save
 ```
+&nbsp;
 
-or
+or install globally
+
+<details><summary>with brew 🍺</summary><br>
 
 ```sh
-curl -sfS https://dotenvx.sh/ext/hub.sh | sh
+brew install dotenvx/brew/dotenvx-ext-hub
+dotenvx ext hub help
 ```
+
+&nbsp;
+
+</details>
+
+<details><summary>with curl 🌐 </summary><br>
+
+```sh
+curl -sfS https://dotenvx.sh/ext/hub | sh
+dotenvx ext hub help
+```
+
+&nbsp;
+
+</details>
+
+<details><summary>or with github releases 🐙</summary><br>
+
+```sh
+curl -L -o dotenvx-ext-hub.tar.gz "https://github.com/dotenvx/dotenvx-ext-hub/releases/latest/download/dotenvx-ext-hub-$(uname -s)-$(uname -m).tar.gz"
+tar -xzf dotenvx-ext-hub.tar.gz
+./dotenvx-ext-hub help
+```
+
+</details>
+
+
+&nbsp;
 
 ## Usage
 
